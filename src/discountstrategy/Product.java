@@ -10,6 +10,7 @@ package discountstrategy;
  * @author jstra
  */
 public class Product {
+
     private String productNo;
     private String name;
     private double unitPrice;
@@ -22,42 +23,40 @@ public class Product {
         this.discountStrat = discountStrat;
     }
 
-    public String getProductNo() {
+    public final double getTotal(int qty) {
+        return qty * unitPrice;
+    }
+
+    public final String getProductNo() {
         return productNo;
     }
 
-    public void setProductNo(String productNo) {
+    public final void setProductNo(String productNo) {
         this.productNo = productNo;
     }
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public final void setName(String name) {
         this.name = name;
     }
 
-    public double getUnitPrice() {
+    public final double getUnitPrice() {
         return unitPrice;
     }
 
-    public void setUnitPrice(double unitPrice) {
+    public final void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
 
-    public DiscountStrategy getDiscountStrat() {
+    public final DiscountStrategy getDiscountStrat() {
         return discountStrat;
     }
 
-    public void setDiscountStrat(DiscountStrategy discountStrat) {
+    public final void setDiscountStrat(DiscountStrategy discountStrat) {
         this.discountStrat = discountStrat;
     }
 
-    
-    
-    
-    
-    
-    
 }

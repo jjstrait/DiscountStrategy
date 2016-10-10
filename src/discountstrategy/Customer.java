@@ -10,9 +10,10 @@ package discountstrategy;
  * @author jstra
  */
 class Customer {
-private String lastName;
-private String firstName;
-private String customerNo;
+
+    private String lastName;
+    private String firstName;
+    private String customerNo;
 
     public Customer(String lastName, String firstName, String customerNo) {
         this.lastName = lastName;
@@ -20,29 +21,28 @@ private String customerNo;
         this.customerNo = customerNo;
     }
 
-    public String getLastName() {
+    public final String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public final void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public String getFirstName() {
+    public final String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public final void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getCustomerNo() {
+    public final String getCustomerNo() {
         return customerNo;
     }
 
-    public void setCustomerNo(String customerNo) {
+    public final void setCustomerNo(String customerNo) {
         this.customerNo = customerNo;
     }
-
 
 }

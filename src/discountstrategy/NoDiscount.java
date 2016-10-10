@@ -9,23 +9,24 @@ package discountstrategy;
  *
  * @author jstra
  */
-public class NoDiscount implements DiscountStrategy{
+public class NoDiscount implements DiscountStrategy {
+
     private double discountRate;
     private final double NO_DISCOUNT_RATE = 0;
-    
+
     @Override
     public final double getDiscount(int qty, double unitPrice) {
         return NO_DISCOUNT_RATE;
     }
 
-     @Override
+    @Override
     public final double getDiscountRate() {
         return NO_DISCOUNT_RATE;
     }
+
     @Override
     public final void setDiscountRate(double discountRate) {
-       this.discountRate = this.NO_DISCOUNT_RATE;
+        this.discountRate = this.NO_DISCOUNT_RATE;
     }
-   
-    
+
 }

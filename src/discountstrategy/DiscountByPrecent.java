@@ -21,10 +21,12 @@ public class DiscountByPrecent implements DiscountStrategy {
     public final double getDiscount(int qty, double unitPrice) {
         return unitPrice * qty * discountRate;
     }
+
     @Override
     public final double getDiscountRate() {
         return discountRate;
     }
+
     @Override
     public final void setDiscountRate(double discountRate) {
         //needs vailidation

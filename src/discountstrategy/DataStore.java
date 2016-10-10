@@ -11,8 +11,8 @@ package discountstrategy;
  */
 public interface DataStore {
 
-    public Customer findCustomerById(String customerNo);
-    public Product findProductById(String productId);
-    
-    
+    public abstract Customer findCustomerById(String customerNo);
+
+    public abstract Product findProductById(String productId);
+
 }

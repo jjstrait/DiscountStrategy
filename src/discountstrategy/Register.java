@@ -10,21 +10,24 @@ package discountstrategy;
  * @author jstra
  */
 public class Register {
-    private Receipt receipt; 
+
+    private Receipt receipt;
     private Product products;
-    
-    public final void startNewSale(String customerNo, DataStore db){
-        receipt = new Receipt(customerNo, db);   
+
+    public final void startNewSale(String customerNo, DataStore db) {
+        receipt = new Receipt(customerNo, db);
     }
-    public final void addProductVoid(String productId, int qty){
+
+    public final void addProduct(String productId, int qty) {
         receipt.addItem(productId, qty);
     }
-    
-    public final void endSale(){
-    receipt.endSale();
+
+    public final void voidProduct(String productId) {
+        receipt.voidItem(productId);
     }
-    
-    
-    
-    
+
+    public final void endSale(ReceiptFormat fmt, ReceiptOutputStrategy output) {
+        receipt.endSale(fmt, output);
+    }
+
 }

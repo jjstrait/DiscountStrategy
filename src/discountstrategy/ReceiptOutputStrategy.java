@@ -10,7 +10,7 @@ package discountstrategy;
  * @author jstra
  */
 public interface ReceiptOutputStrategy {
-    
-    public abstract void displayReceipt();
-    
+
+    public abstract void displayReceiptFmt(ReceiptFormat fmt, int receitpNo, Customer customer, LineItem[] items);
+
 }

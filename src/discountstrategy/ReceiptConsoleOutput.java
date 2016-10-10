@@ -9,11 +9,13 @@ package discountstrategy;
  *
  * @author jstra
  */
-public class ReceiptConsoleOutput implements ReceiptOutputStrategy{
+public class ReceiptConsoleOutput implements ReceiptOutputStrategy {
+
+    private ReceiptFormat fmt;
 
     @Override
-    public void displayReceipt() {
-        
+    public final void displayReceiptFmt(ReceiptFormat fmt, int receitpNo, Customer customer, LineItem[] items) {
+        System.out.println(fmt.getFormat(receitpNo, customer, items));
     }
-    
+
 }

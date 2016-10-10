@@ -10,9 +10,11 @@ package discountstrategy;
  * @author jstra
  */
 public interface DiscountStrategy {
-    
-    public abstract double getDiscount(int qty,double unitPrice);
+
+    public abstract double getDiscount(int qty, double unitPrice);
+
     public abstract void setDiscountRate(double discountRate);
+
     public abstract double getDiscountRate();
-    
+
 }
