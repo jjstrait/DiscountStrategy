@@ -28,9 +28,14 @@ public class DiscountByPrecent implements DiscountStrategy {
     }
 
     @Override
-    public final void setDiscountRate(double discountRate) {
+    public final void setDiscountRate(double discountRate)throws IllegalArgumentException {
         //needs vailidation
-        this.discountRate = discountRate;
+        if(discountRate ==0|| discountRate>1){
+            throw new IllegalArgumentException("The double for discount rate is empty or to high");
+        }else{
+             this.discountRate = discountRate;
+        }
+        
     }
 
 }

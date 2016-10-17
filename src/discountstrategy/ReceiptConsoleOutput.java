@@ -15,7 +15,12 @@ public class ReceiptConsoleOutput implements ReceiptOutputStrategy {
 
     @Override
     public final void displayReceiptFmt(ReceiptFormat fmt, int receitpNo, Customer customer, LineItem[] items) {
-        System.out.println(fmt.getFormat(receitpNo, customer, items));
+         try{
+            fmt.getFormat(receitpNo, customer, items);
+        }catch(IllegalArgumentException e){
+            System.out.println(fmt);
+        }
+        
     }
 
 }

@@ -15,7 +15,13 @@ public class ReceiptGuiOutput implements ReceiptOutputStrategy {
 
     @Override
     public void displayReceiptFmt(ReceiptFormat fmt, int receitpNo, Customer customer, LineItem[] items) {
-        JOptionPane.showMessageDialog(null, fmt.getFormat(receitpNo, customer, items));
+       
+        try{
+        fmt.getFormat(receitpNo, customer, items);
+        }catch(IllegalArgumentException e){
+       JOptionPane.showMessageDialog(null, fmt);
+        }
+        
     }
 
 }

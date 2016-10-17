@@ -12,7 +12,7 @@ package discountstrategy;
 public class Register {
 
     private Receipt receipt;
-    private Product products;
+ 
 
     public final void startNewSale(String customerNo, DataStore db) {
         receipt = new Receipt(customerNo, db);

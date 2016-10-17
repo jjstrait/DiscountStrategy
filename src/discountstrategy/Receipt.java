@@ -17,7 +17,7 @@ public class Receipt {
     private Customer customer;
     private DataStore db;
     private LineItem listOfItems[];
-    private Product product;
+//    private Product product;
     private ReceiptOutputStrategy output;
 
     public Receipt(String customerNo, DataStore db) {
@@ -123,12 +123,12 @@ public class Receipt {
         this.listOfItems = listOfItems;
     }
 
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
+//    public Product getProduct() {
+//        return product;
+//    }
+//
+//    public void setProduct(Product product) {
+//        this.product = product;
+//    }
 
 }
